@@ -11,7 +11,7 @@ ai = list(map(int, a))
 if len(ai) != n:
     print("Элементы не соответствуют указанному количеству")
 else:
-    x = int(input('Введите число X, которое необходимо найти в списке: '))
+    x = int(input("Введите X: "))
     count = 0
     for i in range(n):
         if ai[i] == x:
