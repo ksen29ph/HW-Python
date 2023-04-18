@@ -5,3 +5,15 @@
 # Последняя строка содержит число X.
 
 
+n = abs(int(input("Введите N: ")))
+a = input("Введите через пробел элементы массива: ").split()
+ai = list(map(int, a))
+if len(ai) != n:
+    print("Элементы не соответствуют указанному количеству")
+else:
+    x = int(input('Введите число X, которое необходимо найти в списке: '))
+    count = 0
+    for i in range(n):
+        if ai[i] == x:
+            count += 1
+    print(count) 
