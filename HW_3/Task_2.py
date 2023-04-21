@@ -18,4 +18,4 @@ else:
         if count < min:
             min = count
             index = i
-     print(ai[index])
+     print(ai[index]) 
