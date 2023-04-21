@@ -4,3 +4,18 @@
 # В последующих  строках записаны N целых чисел Ai (можно использовать псевдогенерацию).
 # Последняя строка содержит число X.
 
+n = abs(int(input("Введите N: ")))
+a = input("Введите через пробел элементы массива: ").split()
+ai = list(map(int, a))
+if len(ai) != n or n == 0:
+    print("Элементы не соответствуют указанному количеству")
+else:
+     x = int(input("Введите X: "))
+     min = abs(x - ai[0])
+     index = 0
+     for i in range(1, n):
+        count = abs(x - ai[i])
+        if count < min:
+            min = count
+            index = i
+     print(ai[index])
