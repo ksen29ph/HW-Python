@@ -7,3 +7,19 @@
 # Стихотворение  Винни-Пух вбивает в программу с клавиатуры. В ответе напишите “Парам пам-пам”,
 # если с ритмом все в порядке и “Пам парам”, если с ритмом все не в порядке.
 
+def Pooh(str):
+    str = str.split()
+    list = []
+    for word in str:
+        res = 0
+        for i in word:
+            if i in "аеёиоуыэюя":
+                res += 1
+        list.append(res)        
+    return len(list) == list.count(list[0])    
+print("Введите: пара-ра-рам рам-пам-папам па-ра-па-да")
+str = input()
+if Pooh(str):
+    print("Парам пам-пам")
+else:
+    print("Пам парам")    
